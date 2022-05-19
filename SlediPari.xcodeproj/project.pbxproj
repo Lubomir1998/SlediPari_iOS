@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E33797228362BCA00041E1D /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33797128362BCA00041E1D /* SplashScreen.swift */; };
+		1E33797428362EE400041E1D /* GetMonthsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33797328362EE400041E1D /* GetMonthsViewModel.swift */; };
+		1E33797A28368B3900041E1D /* InlineSpendingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33797928368B3900041E1D /* InlineSpendingView.swift */; };
 		1E5B2D34282FD80200D3F5F0 /* SlediPariApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B2D33282FD80200D3F5F0 /* SlediPariApp.swift */; };
 		1E5B2D36282FD80200D3F5F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B2D35282FD80200D3F5F0 /* ContentView.swift */; };
 		1E5B2D38282FD80700D3F5F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E5B2D37282FD80700D3F5F0 /* Assets.xcassets */; };
@@ -16,6 +19,17 @@
 		1E5B2D4A282FD80700D3F5F0 /* SlediPariTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B2D49282FD80700D3F5F0 /* SlediPariTests.swift */; };
 		1E5B2D54282FD80800D3F5F0 /* SlediPariUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B2D53282FD80800D3F5F0 /* SlediPariUITests.swift */; };
 		1E5B2D56282FD80800D3F5F0 /* SlediPariUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B2D55282FD80800D3F5F0 /* SlediPariUITestsLaunchTests.swift */; };
+		1E5B2D65282FD94A00D3F5F0 /* MonthDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B2D64282FD94A00D3F5F0 /* MonthDTO.swift */; };
+		1E5B2D69282FE19F00D3F5F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B2D68282FE19F00D3F5F0 /* Constants.swift */; };
+		1E5B2D6C282FE45900D3F5F0 /* MonthApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B2D6B282FE45900D3F5F0 /* MonthApi.swift */; };
+		1E5B2D7028304B0400D3F5F0 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B2D6F28304B0400D3F5F0 /* MonthView.swift */; };
+		1E5B2D722830507500D3F5F0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B2D712830507500D3F5F0 /* Extensions.swift */; };
+		1E5B2D752830551200D3F5F0 /* MonthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B2D742830551200D3F5F0 /* MonthService.swift */; };
+		1E5B2D772830CEA000D3F5F0 /* MonthsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B2D762830CEA000D3F5F0 /* MonthsViewModel.swift */; };
+		1E5B2D792831986A00D3F5F0 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B2D782831986A00D3F5F0 /* PieChartView.swift */; };
+		1EE457162833E09200ACE78F /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE457152833E09200ACE78F /* Month.swift */; };
+		1EE4571A2834D78E00ACE78F /* Localizable-Eng.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EE4571C2834D78E00ACE78F /* Localizable-Eng.strings */; };
+		1EE4571F2834D83E00ACE78F /* Localizable-Bg.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EE4571E2834D83E00ACE78F /* Localizable-Bg.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E33797128362BCA00041E1D /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		1E33797328362EE400041E1D /* GetMonthsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMonthsViewModel.swift; sourceTree = "<group>"; };
+		1E33797928368B3900041E1D /* InlineSpendingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineSpendingView.swift; sourceTree = "<group>"; };
 		1E5B2D30282FD80200D3F5F0 /* SlediPari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlediPari.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E5B2D33282FD80200D3F5F0 /* SlediPariApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlediPariApp.swift; sourceTree = "<group>"; };
 		1E5B2D35282FD80200D3F5F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +65,18 @@
 		1E5B2D4F282FD80800D3F5F0 /* SlediPariUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlediPariUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E5B2D53282FD80800D3F5F0 /* SlediPariUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlediPariUITests.swift; sourceTree = "<group>"; };
 		1E5B2D55282FD80800D3F5F0 /* SlediPariUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlediPariUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1E5B2D64282FD94A00D3F5F0 /* MonthDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthDTO.swift; sourceTree = "<group>"; };
+		1E5B2D68282FE19F00D3F5F0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1E5B2D6B282FE45900D3F5F0 /* MonthApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthApi.swift; sourceTree = "<group>"; };
+		1E5B2D6F28304B0400D3F5F0 /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
+		1E5B2D712830507500D3F5F0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1E5B2D742830551200D3F5F0 /* MonthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthService.swift; sourceTree = "<group>"; };
+		1E5B2D762830CEA000D3F5F0 /* MonthsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthsViewModel.swift; sourceTree = "<group>"; };
+		1E5B2D782831986A00D3F5F0 /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		1EE457152833E09200ACE78F /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
+		1EE4571B2834D78E00ACE78F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Localizable-Eng.strings"; sourceTree = "<group>"; };
+		1EE4571D2834D82A00ACE78F /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = "bg.lproj/Localizable-Eng.strings"; sourceTree = "<group>"; };
+		1EE4571E2834D83E00ACE78F /* Localizable-Bg.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = "Localizable-Bg.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +127,12 @@
 		1E5B2D32282FD80200D3F5F0 /* SlediPari */ = {
 			isa = PBXGroup;
 			children = (
+				1EE457172834D4B300ACE78F /* Localizable */,
+				1E5B2D73283054FD00D3F5F0 /* Services */,
+				1E5B2D6A282FE44000D3F5F0 /* Api */,
+				1E5B2D67282FE18600D3F5F0 /* Utility */,
+				1E5B2D63282FD93600D3F5F0 /* Views */,
+				1E5B2D62282FD92800D3F5F0 /* Models */,
 				1E5B2D33282FD80200D3F5F0 /* SlediPariApp.swift */,
 				1E5B2D35282FD80200D3F5F0 /* ContentView.swift */,
 				1E5B2D37282FD80700D3F5F0 /* Assets.xcassets */,
@@ -131,6 +166,62 @@
 				1E5B2D55282FD80800D3F5F0 /* SlediPariUITestsLaunchTests.swift */,
 			);
 			path = SlediPariUITests;
+			sourceTree = "<group>";
+		};
+		1E5B2D62282FD92800D3F5F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1E5B2D64282FD94A00D3F5F0 /* MonthDTO.swift */,
+				1EE457152833E09200ACE78F /* Month.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1E5B2D63282FD93600D3F5F0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E5B2D6F28304B0400D3F5F0 /* MonthView.swift */,
+				1E5B2D762830CEA000D3F5F0 /* MonthsViewModel.swift */,
+				1E5B2D782831986A00D3F5F0 /* PieChartView.swift */,
+				1E33797128362BCA00041E1D /* SplashScreen.swift */,
+				1E33797328362EE400041E1D /* GetMonthsViewModel.swift */,
+				1E33797928368B3900041E1D /* InlineSpendingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1E5B2D67282FE18600D3F5F0 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				1E5B2D68282FE19F00D3F5F0 /* Constants.swift */,
+				1E5B2D712830507500D3F5F0 /* Extensions.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		1E5B2D6A282FE44000D3F5F0 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				1E5B2D6B282FE45900D3F5F0 /* MonthApi.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		1E5B2D73283054FD00D3F5F0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1E5B2D742830551200D3F5F0 /* MonthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1EE457172834D4B300ACE78F /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				1EE4571C2834D78E00ACE78F /* Localizable-Eng.strings */,
+				1EE4571E2834D83E00ACE78F /* Localizable-Bg.strings */,
+			);
+			path = Localizable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +310,7 @@
 			knownRegions = (
 				en,
 				Base,
+				bg,
 			);
 			mainGroup = 1E5B2D27282FD80200D3F5F0;
 			productRefGroup = 1E5B2D31282FD80200D3F5F0 /* Products */;
@@ -238,6 +330,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E5B2D3B282FD80700D3F5F0 /* Preview Assets.xcassets in Resources */,
+				1EE4571A2834D78E00ACE78F /* Localizable-Eng.strings in Resources */,
+				1EE4571F2834D83E00ACE78F /* Localizable-Bg.strings in Resources */,
 				1E5B2D38282FD80700D3F5F0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,10 +357,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E5B2D792831986A00D3F5F0 /* PieChartView.swift in Sources */,
 				1E5B2D3D282FD80700D3F5F0 /* Persistence.swift in Sources */,
+				1E33797228362BCA00041E1D /* SplashScreen.swift in Sources */,
+				1E5B2D722830507500D3F5F0 /* Extensions.swift in Sources */,
+				1E5B2D6C282FE45900D3F5F0 /* MonthApi.swift in Sources */,
+				1E33797A28368B3900041E1D /* InlineSpendingView.swift in Sources */,
 				1E5B2D36282FD80200D3F5F0 /* ContentView.swift in Sources */,
+				1E5B2D752830551200D3F5F0 /* MonthService.swift in Sources */,
+				1E5B2D7028304B0400D3F5F0 /* MonthView.swift in Sources */,
+				1E5B2D772830CEA000D3F5F0 /* MonthsViewModel.swift in Sources */,
 				1E5B2D34282FD80200D3F5F0 /* SlediPariApp.swift in Sources */,
+				1E33797428362EE400041E1D /* GetMonthsViewModel.swift in Sources */,
+				1E5B2D65282FD94A00D3F5F0 /* MonthDTO.swift in Sources */,
 				1E5B2D40282FD80700D3F5F0 /* SlediPari.xcdatamodeld in Sources */,
+				1E5B2D69282FE19F00D3F5F0 /* Constants.swift in Sources */,
+				1EE457162833E09200ACE78F /* Month.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,11 +408,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		1EE4571C2834D78E00ACE78F /* Localizable-Eng.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1EE4571B2834D78E00ACE78F /* en */,
+				1EE4571D2834D82A00ACE78F /* bg */,
+			);
+			name = "Localizable-Eng.strings";
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		1E5B2D57282FD80800D3F5F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -367,6 +486,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -425,6 +545,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SlediPari/Preview Content\"";
+				DEVELOPMENT_TEAM = UJT3VRF3G5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -453,6 +574,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SlediPari/Preview Content\"";
+				DEVELOPMENT_TEAM = UJT3VRF3G5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
