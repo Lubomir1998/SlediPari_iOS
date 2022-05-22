@@ -65,15 +65,17 @@ struct MonthView: View {
                                 Spacer()
                             }
                             else {
-                                Circle()
-                                    .fill(Color.red)
-                                    .frame(width: 20, height: 20)
-                                    .onTapGesture {
-                                        
-                                        viewModel.totalSum = currentMonth.totalSum
-                                        viewModel.currentList = currentMonth.sortedList
-                                        viewModel.currentCategory = LocalizedStringKey("All")
-                                    }
+                                
+                                Button {
+                                    
+                                    viewModel.totalSum = currentMonth.totalSum
+                                    viewModel.currentList = currentMonth.sortedList
+                                    viewModel.currentCategory = LocalizedStringKey("All")
+                                } label: {
+                                    
+                                    Text(LocalizedStringKey("back_to_all"))
+                                        .font(.system(size: 14))
+                                }
                             }
                             
                             Text(viewModel.currentCategory)
