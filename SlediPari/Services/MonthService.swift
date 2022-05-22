@@ -31,4 +31,14 @@ class MonthService {
         }
     }
     
+    func addSpending(request: PostSpendingRequest) async throws -> Bool {
+        
+        do {
+            return try await api.addSpending(request: request)
+        }
+        catch {
+            throw error
+        }
+    }
+    
 }

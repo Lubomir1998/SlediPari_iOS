@@ -13,25 +13,26 @@ struct InlineSpendingView: View {
     let isSubCategory: Bool
     
     var body: some View {
+        
         HStack {
             
             Circle()
                 .fill(spending.color)
-                .frame(width: 24, height: 24)
+                .frame(width: 20, height: 20)
             
-            //will be localized
-            Text(spending.title)
+            Text(LocalizedStringKey(spending.title))
             
             if isSubCategory {
                 
                 Text("*")
             }
             
-            Text(" - \(String(format: "%.2f", spending.value)) lv") // lv will be localized
+            Text("- \(String(format: "%.2f", spending.value))")
+            Text(LocalizedStringKey("lv"))
             
             Spacer()
         }
-        
+        .padding(.top, 15)
     }
 }
 

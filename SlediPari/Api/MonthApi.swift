@@ -26,12 +26,30 @@ class MonthApi {
     func getAllMonths() async throws -> [MonthDTO] {
         
         guard let url = URL(string: getBaseUrl() + "getAllMonths") else {
-            return []
+            throw MonthsError.invalidUrl
         }
         
         let (data, _) = try await URLSession.shared.data(from: url)
         let months = try JSONDecoder().decode([MonthDTO].self, from: data)
         return months
+    }
+    
+    func addSpending(request: PostSpendingRequest) async throws -> Bool {
+        
+        guard let url = URL(string: getBaseUrl() + "getAllMonths") else {
+            throw MonthsError.invalidUrl
+        }
+        
+        let requestBody = ["monthId": request.monthId, "title": request.title, "price": request.price] as [String : Any]
+        let finalBody = try JSONSerialization.data(withJSONObject: requestBody)
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.httpBody = finalBody
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let (data, _) = try await URLSession.shared.data(for: request)
+        return try JSONDecoder().decode(Bool.self, from: data)
     }
     
 }

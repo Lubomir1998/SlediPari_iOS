@@ -13,22 +13,28 @@ struct SplashScreen: View {
     
     var body: some View {
         
-        VStack {
+        ZStack {
             
-            if viewModel.completed {
+            Color.white
+            
+            VStack {
                 
-                MonthView(allMonths: viewModel.allMonths)
-            }
-            else {
-                
-                Image("splash")
-                if viewModel.isLoading {
-                    ProgressView()
+                if viewModel.completed {
+                    
+                    MonthView(allMonths: viewModel.allMonths)
+                }
+                else {
+                    
+                    Image("splash")
+                    if viewModel.isLoading {
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle(tint: .gray))
+                    }
                 }
             }
-        }
-        .task {
-            await viewModel.getAllMonths()
+            .task {
+                await viewModel.getAllMonths()
+            }
         }
     }
 }

@@ -10,6 +10,9 @@
 		1E33797228362BCA00041E1D /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33797128362BCA00041E1D /* SplashScreen.swift */; };
 		1E33797428362EE400041E1D /* GetMonthsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33797328362EE400041E1D /* GetMonthsViewModel.swift */; };
 		1E33797A28368B3900041E1D /* InlineSpendingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33797928368B3900041E1D /* InlineSpendingView.swift */; };
+		1E33797C283787E400041E1D /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33797B283787E400041E1D /* BottomSheetView.swift */; };
+		1E33797E28378C6000041E1D /* AddSpendingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33797D28378C6000041E1D /* AddSpendingOptions.swift */; };
+		1E33798028390CEC00041E1D /* PostSpendingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33797F28390CEC00041E1D /* PostSpendingRequest.swift */; };
 		1E5B2D34282FD80200D3F5F0 /* SlediPariApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B2D33282FD80200D3F5F0 /* SlediPariApp.swift */; };
 		1E5B2D36282FD80200D3F5F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B2D35282FD80200D3F5F0 /* ContentView.swift */; };
 		1E5B2D38282FD80700D3F5F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E5B2D37282FD80700D3F5F0 /* Assets.xcassets */; };
@@ -28,8 +31,7 @@
 		1E5B2D772830CEA000D3F5F0 /* MonthsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B2D762830CEA000D3F5F0 /* MonthsViewModel.swift */; };
 		1E5B2D792831986A00D3F5F0 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B2D782831986A00D3F5F0 /* PieChartView.swift */; };
 		1EE457162833E09200ACE78F /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE457152833E09200ACE78F /* Month.swift */; };
-		1EE4571A2834D78E00ACE78F /* Localizable-Eng.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EE4571C2834D78E00ACE78F /* Localizable-Eng.strings */; };
-		1EE4571F2834D83E00ACE78F /* Localizable-Bg.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EE4571E2834D83E00ACE78F /* Localizable-Bg.strings */; };
+		1EE4571A2834D78E00ACE78F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EE4571C2834D78E00ACE78F /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		1E33797128362BCA00041E1D /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		1E33797328362EE400041E1D /* GetMonthsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMonthsViewModel.swift; sourceTree = "<group>"; };
 		1E33797928368B3900041E1D /* InlineSpendingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineSpendingView.swift; sourceTree = "<group>"; };
+		1E33797B283787E400041E1D /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
+		1E33797D28378C6000041E1D /* AddSpendingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpendingOptions.swift; sourceTree = "<group>"; };
+		1E33797F28390CEC00041E1D /* PostSpendingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSpendingRequest.swift; sourceTree = "<group>"; };
 		1E5B2D30282FD80200D3F5F0 /* SlediPari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlediPari.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E5B2D33282FD80200D3F5F0 /* SlediPariApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlediPariApp.swift; sourceTree = "<group>"; };
 		1E5B2D35282FD80200D3F5F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,9 +79,8 @@
 		1E5B2D762830CEA000D3F5F0 /* MonthsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthsViewModel.swift; sourceTree = "<group>"; };
 		1E5B2D782831986A00D3F5F0 /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		1EE457152833E09200ACE78F /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
-		1EE4571B2834D78E00ACE78F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Localizable-Eng.strings"; sourceTree = "<group>"; };
-		1EE4571D2834D82A00ACE78F /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = "bg.lproj/Localizable-Eng.strings"; sourceTree = "<group>"; };
-		1EE4571E2834D83E00ACE78F /* Localizable-Bg.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = "Localizable-Bg.strings"; sourceTree = "<group>"; };
+		1EE4571B2834D78E00ACE78F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1EE4571D2834D82A00ACE78F /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,7 @@
 			children = (
 				1E5B2D64282FD94A00D3F5F0 /* MonthDTO.swift */,
 				1EE457152833E09200ACE78F /* Month.swift */,
+				1E33797F28390CEC00041E1D /* PostSpendingRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 				1E33797128362BCA00041E1D /* SplashScreen.swift */,
 				1E33797328362EE400041E1D /* GetMonthsViewModel.swift */,
 				1E33797928368B3900041E1D /* InlineSpendingView.swift */,
+				1E33797B283787E400041E1D /* BottomSheetView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,6 +201,7 @@
 			children = (
 				1E5B2D68282FE19F00D3F5F0 /* Constants.swift */,
 				1E5B2D712830507500D3F5F0 /* Extensions.swift */,
+				1E33797D28378C6000041E1D /* AddSpendingOptions.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -218,8 +225,7 @@
 		1EE457172834D4B300ACE78F /* Localizable */ = {
 			isa = PBXGroup;
 			children = (
-				1EE4571C2834D78E00ACE78F /* Localizable-Eng.strings */,
-				1EE4571E2834D83E00ACE78F /* Localizable-Bg.strings */,
+				1EE4571C2834D78E00ACE78F /* Localizable.strings */,
 			);
 			path = Localizable;
 			sourceTree = "<group>";
@@ -330,8 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E5B2D3B282FD80700D3F5F0 /* Preview Assets.xcassets in Resources */,
-				1EE4571A2834D78E00ACE78F /* Localizable-Eng.strings in Resources */,
-				1EE4571F2834D83E00ACE78F /* Localizable-Bg.strings in Resources */,
+				1EE4571A2834D78E00ACE78F /* Localizable.strings in Resources */,
 				1E5B2D38282FD80700D3F5F0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +365,7 @@
 				1E5B2D792831986A00D3F5F0 /* PieChartView.swift in Sources */,
 				1E5B2D3D282FD80700D3F5F0 /* Persistence.swift in Sources */,
 				1E33797228362BCA00041E1D /* SplashScreen.swift in Sources */,
+				1E33798028390CEC00041E1D /* PostSpendingRequest.swift in Sources */,
 				1E5B2D722830507500D3F5F0 /* Extensions.swift in Sources */,
 				1E5B2D6C282FE45900D3F5F0 /* MonthApi.swift in Sources */,
 				1E33797A28368B3900041E1D /* InlineSpendingView.swift in Sources */,
@@ -368,10 +374,12 @@
 				1E5B2D7028304B0400D3F5F0 /* MonthView.swift in Sources */,
 				1E5B2D772830CEA000D3F5F0 /* MonthsViewModel.swift in Sources */,
 				1E5B2D34282FD80200D3F5F0 /* SlediPariApp.swift in Sources */,
+				1E33797C283787E400041E1D /* BottomSheetView.swift in Sources */,
 				1E33797428362EE400041E1D /* GetMonthsViewModel.swift in Sources */,
 				1E5B2D65282FD94A00D3F5F0 /* MonthDTO.swift in Sources */,
 				1E5B2D40282FD80700D3F5F0 /* SlediPari.xcdatamodeld in Sources */,
 				1E5B2D69282FE19F00D3F5F0 /* Constants.swift in Sources */,
+				1E33797E28378C6000041E1D /* AddSpendingOptions.swift in Sources */,
 				1EE457162833E09200ACE78F /* Month.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,13 +417,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1EE4571C2834D78E00ACE78F /* Localizable-Eng.strings */ = {
+		1EE4571C2834D78E00ACE78F /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1EE4571B2834D78E00ACE78F /* en */,
 				1EE4571D2834D82A00ACE78F /* bg */,
 			);
-			name = "Localizable-Eng.strings";
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -551,6 +559,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -580,6 +589,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

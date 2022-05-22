@@ -13,7 +13,8 @@ struct MonthView: View {
     
     @ObservedObject private var viewModel = MonthsViewModel()
     
-    @State var currentCategory = "All" // localize
+    @State var currentCategory = LocalizedStringKey("All")
+    @State var isBottomSheetOpened = false
     
     var body: some View {
         
@@ -21,23 +22,26 @@ struct MonthView: View {
             
             ZStack {
                 
-                Color("background").edgesIgnoringSafeArea(.all)
+                Color(UIColor.systemBackground).edgesIgnoringSafeArea(.all)
                 
                 ScrollView(showsIndicators: false) {
+                    
+                    Divider()
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
                             ForEach(allMonths) { month in
                                 Text(month.id.toReadableDate)
                                     .padding(7)
-                                    .background(viewModel.currentMonth?.id == month.id ? Color(UIColor.systemGray3) : Color("background"))
+                                    .background(viewModel.currentMonth?.id == month.id ? Color(UIColor.systemGray3) : Color(UIColor.systemBackground))
                                     .cornerRadius(10)
                                 Spacer(minLength: 35)
                             }
                         }
-                        .padding()
+                        .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
                     }
-                    .border(Color(UIColor.systemGray3), width: 1)
+                    
+                    Divider()
                     
                     if let currentMonth = viewModel.currentMonth {
                         
@@ -58,7 +62,23 @@ struct MonthView: View {
                             .font(.system(size: 20))
                         
                         PieChartView(spendings: currentMonth.sortedList, totalSum: currentMonth.totalSum)
-                            .padding(40)
+                            .padding(EdgeInsets(top: 40, leading: 40, bottom: 340, trailing: 40))
+                        
+                        ForEach(currentMonth.sortedList, id: \.self) { spending in
+                            
+                            InlineSpendingView(spending: spending, isSubCategory: (spending.title == "smetki" || spending.title == "transport" || spending.title == "food" || spending.title == "cosmetics" || spending.title == "preparati"))
+                        }
+                        .padding(.leading, 20)
+                        
+                        HStack {
+                            Text(LocalizedStringKey("total"))
+                            Text(String(format: "%.2f", currentMonth.totalSum))
+                            Text(LocalizedStringKey("lv"))
+                        }
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .padding()
+                        
+                        Spacer(minLength: 40)
                     }
                     
                 }
@@ -75,11 +95,15 @@ struct MonthView: View {
             )
             .navigationBarItems(
                 trailing: Button {
-                    // open bottom sheet
+                    
+                    self.isBottomSheetOpened.toggle()
                 } label: {
                     Image(systemName: "plus")
                 }
             )
+            .sheet(isPresented: $isBottomSheetOpened) {
+                BottomSheetView(isPresented: $isBottomSheetOpened).environmentObject(viewModel)
+            }
         }
     }
 }

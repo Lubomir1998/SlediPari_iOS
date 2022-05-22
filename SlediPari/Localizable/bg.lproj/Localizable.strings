@@ -1,0 +1,73 @@
+"All" = "Всички";
+"total" = "Общо";
+"clothes" = "Дрехи";
+"workout" = "Тренировки";
+"food" = "Храна";
+"home" = "Домашна";
+"restaurant" = "Навънка";
+"smetki" = "Сметки";
+"tok" = "Ток";
+"voda" = "Вода";
+"toplo" = "Топлофикация";
+"internet" = "Интернет";
+"telefon" = "Телефон";
+"vhod" = "Входна такса";
+"cosmetics" = "Козметика";
+"higien" = "Хигиена";
+"other" = "Други";
+"transport" = "Транспорт";
+"taxi" = "Такси";
+"car" = "Кола";
+"public" = "Обществен транспорт";
+"preparati" = "Препарати";
+"clean" = "Почистване";
+"wash" = "Пране";
+"toys" = "Играчки";
+"tattoo" = "Татуировка";
+"snacks" = "Сладки";
+"subscriptions" = "Абонаменти";
+"remont" = "Ремонт";
+"machove" = "Мачове";
+"furniture" = "Обзавеждане";
+"tehnika" = "Техника";
+"travel" = "Пътувания";
+"posuda" = "Кухн. посуда";
+"medicine" = "Лекарства";
+"domPotrebi" = "Дом. потреби";
+"education" = "Образование";
+"entertainment" = "Забавление";
+"gifts" = "Подаръци";
+
+"lv" = "лв";
+"cancel" = "Отмени";
+
+"food_home" = "Храна - Вкъщи";
+"food_res" = "Храна - Навън";
+
+"smetki_tok" = "Сметки - Ток";
+"smetki_voda" = "Сметки - Вода";
+"smetki_toplo" = "Сметки - Топлофикация";
+"smetki_internet" = "Сметки - Интернет";
+"smetki_telefon" = "Сметки - Телефон";
+"smetki_vhod" = "Сметки - Вход";
+
+"transport_public" = "Транспорт - Градски";
+"transport_car" = "Транспорт - Кола";
+"transport_taxi" = "Транспорт - Такси";
+
+"cosmetics_higien" = "Козметика - Хигиена";
+"cosmetics_other" = "Козметика - Други";
+
+"preparati_clean" = "Препарати - Чистене";
+"preparati_wash" = "Препарати - Пране";
+
+"spending_options" = "Опции за разход";
+"not_selected" = "Не е избрано";
+"spending_type" = "Тип на разход";
+"enter_price" = "Въведи цена";
+"spend" = "Похарчи";
+"nothing_selected" = "Избери опция";
+"enter_price" = "Въведи валидна цена";
+"ok" = "Добре";
+"price" = "Цена";
+"something_wrong" = "Нещо се обърка";

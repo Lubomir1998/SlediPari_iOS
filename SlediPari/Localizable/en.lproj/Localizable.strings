@@ -1,0 +1,73 @@
+"All" = "All";
+"total" = "Total";
+"clothes" = "Clothes";
+"workout" = "Workout";
+"food" = "Food";
+"home" = "Home";
+"restaurant" = "Outside";
+"smetki" = "Bills";
+"tok" = "Electricity";
+"voda" = "Water";
+"toplo" = "Heating";
+"internet" = "Internet";
+"telefon" = "Phone";
+"vhod" = "Entrance fee";
+"cosmetics" = "Cosmetics";
+"higien" = "Hygiene";
+"other" = "Other";
+"transport" = "Transport";
+"taxi" = "Taxi";
+"car" = "Car";
+"public" = "Public transport";
+"preparati" = "Cleaning supplies";
+"clean" = "Clean";
+"wash" = "Wash";
+"toys" = "Toys";
+"tattoo" = "Tattoo";
+"snacks" = "Snacks";
+"subscriptions" = "Subscriptions";
+"remont" = "Repair";
+"machove" = "Matches";
+"furniture" = "Furniture";
+"tehnika" = "Technology";
+"travel" = "Travel";
+"posuda" = "Kitchenware";
+"medicine" = "Health";
+"domPotrebi" = "Household";
+"education" = "Education";
+"entertainment" = "Entertainment";
+"gifts" = "Gifts";
+
+"lv" = "lv";
+"cancel" = "Cancel";
+
+"food_home" = "Food - Home";
+"food_res" = "Food - Outside";
+
+"smetki_tok" = "Bills - Electricity";
+"smetki_voda" = "Bills - Water";
+"smetki_toplo" = "Bills - Heat";
+"smetki_internet" = "Bills - Internet";
+"smetki_telefon" = "Bills - Phone";
+"smetki_vhod" = "Bills - Entrance";
+
+"transport_public" = "Transport - Public";
+"transport_car" = "Transport - Car";
+"transport_taxi" = "Transport - Taxi";
+
+"cosmetics_higien" = "Cosmetics - Hygiene";
+"cosmetics_other" = "Cosmetics - Other";
+
+"preparati_clean" = "Cleaning supplies - Clean";
+"preparati_wash" = "Cleaning supplies - Wash";
+
+"spending_options" = "Spending options";
+"not_selected" = "Not selected";
+"spending_type" = "Spending type";
+"enter_price" = "Enter a price";
+"spend" = "Spend";
+"nothing_selected" = "Select an option";
+"enter_price" = "Enter a valid price";
+"ok" = "Ok";
+"price" = "Price";
+"something_wrong" = "Something went wrong";

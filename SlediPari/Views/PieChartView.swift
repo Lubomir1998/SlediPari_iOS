@@ -24,15 +24,8 @@ struct PieChartView: View {
                         
                         PiePiece(spendings: spendings, index: index, totalSum: totalSum, center: CGPoint(x: g.frame(in: .global).width / 2, y: g.frame(in: .global).width / 2))
                     }
-                    
                 }
             }
-            
-            ForEach(spendings, id: \.self) { spending in
-                
-                InlineSpendingView(spending: spending, isSubCategory: (spending.title == "smetki" || spending.title == "transport" || spending.title == "food" || spending.title == "cosmetics" || spending.title == "preparati"))
-            }
-            .padding()
         }
     }
 }
