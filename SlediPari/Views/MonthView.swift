@@ -12,8 +12,6 @@ struct MonthView: View {
     let allMonths: [Month]
     
     @ObservedObject private var viewModel = MonthsViewModel()
-    
-    @State var currentCategory = LocalizedStringKey("All")
     @State var isBottomSheetOpened = false
     
     var body: some View {
@@ -61,26 +59,77 @@ struct MonthView: View {
                             )
                             .font(.system(size: 20))
                         
-                        Text(currentCategory)
-                            .frame(
-                                minWidth: 0,
-                                maxWidth: .infinity,
-                                alignment: .center
-                            )
-                            .font(.system(size: 20))
+                        HStack {
+                            
+                            if viewModel.currentCategory == LocalizedStringKey("All") {
+                                Spacer()
+                            }
+                            else {
+                                Circle()
+                                    .fill(Color.red)
+                                    .frame(width: 20, height: 20)
+                                    .onTapGesture {
+                                        
+                                        viewModel.totalSum = currentMonth.totalSum
+                                        viewModel.currentList = currentMonth.sortedList
+                                        viewModel.currentCategory = LocalizedStringKey("All")
+                                    }
+                            }
+                            
+                            Text(viewModel.currentCategory)
+                                .frame(
+                                    minWidth: 0,
+                                    maxWidth: .infinity,
+                                    alignment: .center
+                                )
+                                .font(.system(size: 20))
+                            
+                            Spacer()
+                        }
+                        .padding(15)
                         
-                        PieChartView(spendings: currentMonth.sortedList, totalSum: currentMonth.totalSum)
+                        PieChartView(spendings: viewModel.currentList, totalSum: viewModel.totalSum)
                             .padding(EdgeInsets(top: 40, leading: 40, bottom: 340, trailing: 40))
                         
-                        ForEach(currentMonth.sortedList, id: \.self) { spending in
+                        ForEach(viewModel.currentList, id: \.self) { spending in
                             
-                            InlineSpendingView(spending: spending, isSubCategory: (spending.title == "smetki" || spending.title == "transport" || spending.title == "food" || spending.title == "cosmetics" || spending.title == "preparati"))
+                            InlineSpendingView(spending: spending, isSubCategory: (spending.title == "smetki" || spending.title == "transport" || spending.title == "food" || spending.title == "cosmetics" || spending.title == "preparati"), clickAction: { category in
+                                
+                                switch category {
+                                    case "food":
+                                        viewModel.currentList = currentMonth.foodList
+                                        viewModel.totalSum = currentMonth.food
+                                        viewModel.currentCategory = LocalizedStringKey("food")
+                                        
+                                    case "smetki":
+                                        viewModel.currentList = currentMonth.smetkiList
+                                        viewModel.totalSum = currentMonth.smetki
+                                        viewModel.currentCategory = LocalizedStringKey("smetki")
+                                        
+                                    case "preparati":
+                                        viewModel.currentList = currentMonth.preparatiList
+                                        viewModel.totalSum = currentMonth.preparati
+                                        viewModel.currentCategory = LocalizedStringKey("preparati")
+                                        
+                                    case "transport":
+                                        viewModel.currentList = currentMonth.transportList
+                                        viewModel.totalSum = currentMonth.transport
+                                        viewModel.currentCategory = LocalizedStringKey("transport")
+                                        
+                                    case "cosmetics":
+                                        viewModel.currentList = currentMonth.cosmeticsList
+                                        viewModel.totalSum = currentMonth.cosmetics
+                                        viewModel.currentCategory = LocalizedStringKey("cosmetics")
+                                        
+                                    default: do {}
+                                }
+                            })
                         }
                         .padding(.leading, 20)
                         
                         HStack {
                             Text(LocalizedStringKey("total"))
-                            Text(String(format: "%.2f", currentMonth.totalSum))
+                            Text(String(format: "%.2f", viewModel.totalSum))
                             Text(LocalizedStringKey("lv"))
                         }
                         .frame(maxWidth: .infinity, alignment: .trailing)
@@ -110,7 +159,13 @@ struct MonthView: View {
                 }
             )
             .sheet(isPresented: $isBottomSheetOpened) {
-                BottomSheetView(isPresented: $isBottomSheetOpened).environmentObject(viewModel)
+                BottomSheetView(isPresented: $isBottomSheetOpened, resetCategory: {
+                    Task.init {
+                        
+                        await viewModel.getMonth(monthId: formatCurrentDateToString())
+                        viewModel.currentCategory = LocalizedStringKey("All")
+                    }
+                }).environmentObject(viewModel)
             }
         }
     }

@@ -10,6 +10,7 @@ import SwiftUI
 struct BottomSheetView: View {
     
     @Binding var isPresented: Bool
+    let resetCategory: () -> Void
     @EnvironmentObject var viewModel: MonthsViewModel
     
     @State private var currentSelectedIndex = 0
@@ -65,7 +66,7 @@ struct BottomSheetView: View {
                             if viewModel.isAddingSuccessful {
                                 self.isPresented = false
                                 
-                                await viewModel.getMonth(monthId: formatCurrentDateToString())
+                                resetCategory()
                             }
                             else {
                                 showAddingNotSuccessfulAlert = true

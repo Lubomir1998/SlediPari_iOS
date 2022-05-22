@@ -11,6 +11,7 @@ struct InlineSpendingView: View {
     
     let spending: PieSlice
     let isSubCategory: Bool
+    let clickAction: (String) -> Void
     
     var body: some View {
         
@@ -33,6 +34,9 @@ struct InlineSpendingView: View {
             Spacer()
         }
         .padding(.top, 15)
+        .onTapGesture {
+            clickAction(spending.title)
+        }
     }
 }
 
@@ -40,7 +44,8 @@ struct InlineSpendingView_Previews: PreviewProvider {
     static var previews: some View {
         InlineSpendingView(
             spending: PieSlice(value: 13.02, title: "Food", color: Color.blue),
-            isSubCategory: true
+            isSubCategory: true,
+            clickAction: {_ in }
         )
     }
 }

@@ -93,6 +93,101 @@ extension Month: Identifiable {
         
         return sum
     }
+    
+    var foodList: [PieSlice] {
+        
+        let mirror = Mirror(reflecting: self)
+        var list: [PieSlice] = []
+        
+        for child in mirror.children {
+            
+            if let category = child.label, let sumValue = child.value as? Double, category == "home" || category == "restaurant", sumValue > 0 {
+                list.append(PieSlice(value: sumValue, title: category, color: Color(category)))
+            }
+            else {
+                continue
+            }
+        }
+        
+        list.sort(by: { $0.value > $1.value })
+        return list
+    }
+    
+    var smetkiList: [PieSlice] {
+        
+        let mirror = Mirror(reflecting: self)
+        var list: [PieSlice] = []
+        
+        for child in mirror.children {
+            
+            if let category = child.label, let sumValue = child.value as? Double, category == "tok" || category == "voda" || category == "internet" || category == "toplo" || category == "vhod" || category == "telefon", sumValue > 0 {
+                list.append(PieSlice(value: sumValue, title: category, color: Color(category)))
+            }
+            else {
+                continue
+            }
+        }
+        
+        list.sort(by: { $0.value > $1.value })
+        return list
+    }
+    
+    var transportList: [PieSlice] {
+        
+        let mirror = Mirror(reflecting: self)
+        var list: [PieSlice] = []
+        
+        for child in mirror.children {
+            
+            if let category = child.label, let sumValue = child.value as? Double, category == "taxi" || category == "car" || category == "public", sumValue > 0 {
+                list.append(PieSlice(value: sumValue, title: category, color: Color(category)))
+            }
+            else {
+                continue
+            }
+        }
+        
+        list.sort(by: { $0.value > $1.value })
+        return list
+    }
+    
+    var preparatiList: [PieSlice] {
+        
+        let mirror = Mirror(reflecting: self)
+        var list: [PieSlice] = []
+        
+        for child in mirror.children {
+            
+            if let category = child.label, let sumValue = child.value as? Double, category == "clean" || category == "wash", sumValue > 0 {
+                list.append(PieSlice(value: sumValue, title: category, color: Color(category)))
+            }
+            else {
+                continue
+            }
+        }
+        
+        list.sort(by: { $0.value > $1.value })
+        return list
+    }
+    
+    var cosmeticsList: [PieSlice] {
+        
+        let mirror = Mirror(reflecting: self)
+        var list: [PieSlice] = []
+        
+        for child in mirror.children {
+            
+            if let category = child.label, let sumValue = child.value as? Double, category == "higien" || category == "other", sumValue > 0 {
+                list.append(PieSlice(value: sumValue, title: category, color: Color(category)))
+            }
+            else {
+                continue
+            }
+        }
+        
+        list.sort(by: { $0.value > $1.value })
+        return list
+    }
 }
 
 struct PieSlice: Hashable {
