@@ -64,6 +64,8 @@ struct BottomSheetView: View {
                             
                             if viewModel.isAddingSuccessful {
                                 self.isPresented = false
+                                
+                                await viewModel.getMonth(monthId: formatCurrentDateToString())
                             }
                             else {
                                 showAddingNotSuccessfulAlert = true

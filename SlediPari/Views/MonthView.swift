@@ -35,6 +35,14 @@ struct MonthView: View {
                                     .padding(7)
                                     .background(viewModel.currentMonth?.id == month.id ? Color(UIColor.systemGray3) : Color(UIColor.systemBackground))
                                     .cornerRadius(10)
+                                    .onTapGesture {
+                                        
+                                        Task.init {
+                                            
+                                            await viewModel.getMonth(monthId: month.id)
+                                        }
+                                    }
+                                
                                 Spacer(minLength: 35)
                             }
                         }

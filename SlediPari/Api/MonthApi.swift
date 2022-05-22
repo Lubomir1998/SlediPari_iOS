@@ -36,7 +36,7 @@ class MonthApi {
     
     func addSpending(request: PostSpendingRequest) async throws -> Bool {
         
-        guard let url = URL(string: getBaseUrl() + "getAllMonths") else {
+        guard let url = URL(string: getBaseUrl() + "addExpense") else {
             throw MonthsError.invalidUrl
         }
         
