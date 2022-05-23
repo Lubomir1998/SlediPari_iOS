@@ -57,7 +57,7 @@ struct BottomSheetView: View {
                         return
                     }
                     
-                    if let price = Double(value) {
+                    if let price = value.toOptDouble {
                         
                         Task {
                             
@@ -81,6 +81,7 @@ struct BottomSheetView: View {
                 } label: {
                     Text(LocalizedStringKey("spend"))
                 }
+                .disabled(viewModel.isLoading)
                 
                 //because we can't attach more than 1 alert per view
                 //even if we do so, only the first one shows up

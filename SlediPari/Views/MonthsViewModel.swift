@@ -29,8 +29,6 @@ class MonthsViewModel: ObservableObject {
             currentMonth = try await monthsService.getMonth(monthId: monthId)
             if let month = currentMonth {
                 
-                
-                
                 if currentCategory != LocalizedStringKey("All") {
                     
                     switch currentCategory {

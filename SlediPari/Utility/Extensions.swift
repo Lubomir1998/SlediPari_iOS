@@ -47,6 +47,25 @@ extension String {
             return ""
         }
     }
+    
+    var toOptDouble: Double? {
+        
+        var comaCounter = 0
+        var stringValue = self
+        
+        for char in stringValue {
+            if char == "," {
+                comaCounter += 1
+            }
+        }
+        
+        if comaCounter == 1 {
+            stringValue = stringValue.replacingOccurrences(of: ",", with: ".")
+            return Double(stringValue)
+        }
+        
+        return Double(stringValue)
+    }
 }
 
 extension Double {
