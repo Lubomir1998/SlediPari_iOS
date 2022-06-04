@@ -11,6 +11,7 @@ struct InlineSpendingView: View {
     
     let spending: PieSlice
     let isSubCategory: Bool
+    let totalSum: Double
     let clickAction: (String) -> Void
     
     var body: some View {
@@ -31,6 +32,10 @@ struct InlineSpendingView: View {
             Text("- \(String(format: "%.2f", spending.value))")
             Text(LocalizedStringKey("lv"))
             
+            Text("  (\(String(format: "%.2f", spending.value.toPercent(totalSum: totalSum))) %)")
+                .foregroundColor(Color(UIColor.secondaryLabel))
+                .font(.system(size: 14))
+            
             Spacer()
         }
         .padding(.top, 15)
@@ -43,8 +48,9 @@ struct InlineSpendingView: View {
 struct InlineSpendingView_Previews: PreviewProvider {
     static var previews: some View {
         InlineSpendingView(
-            spending: PieSlice(value: 13.02, title: "Food", color: Color.blue),
+            spending: PieSlice(value: 13.00, title: "Food", color: Color.blue),
             isSubCategory: true,
+            totalSum: 26.00,
             clickAction: {_ in }
         )
     }

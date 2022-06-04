@@ -90,12 +90,12 @@ struct MonthView: View {
                         }
                         .padding(15)
                         
-                        PieChartView(spendings: viewModel.currentList, totalSum: viewModel.totalSum)
+                        PieChartView(spendings: viewModel.currentList.reversed(), totalSum: viewModel.totalSum)
                             .padding(EdgeInsets(top: 40, leading: 40, bottom: 340, trailing: 40))
                         
                         ForEach(viewModel.currentList, id: \.self) { spending in
                             
-                            InlineSpendingView(spending: spending, isSubCategory: (spending.title == "smetki" || spending.title == "transport" || spending.title == "food" || spending.title == "cosmetics" || spending.title == "preparati"), clickAction: { category in
+                            InlineSpendingView(spending: spending, isSubCategory: (spending.title == "smetki" || spending.title == "transport" || spending.title == "food" || spending.title == "cosmetics" || spending.title == "preparati"), totalSum: viewModel.totalSum, clickAction: { category in
                                 
                                 switch category {
                                     case "food":
@@ -164,8 +164,8 @@ struct MonthView: View {
                 BottomSheetView(isPresented: $isBottomSheetOpened, resetCategory: {
                     Task.init {
                         
-                        await viewModel.getMonth(monthId: formatCurrentDateToString())
                         viewModel.currentCategory = LocalizedStringKey("All")
+                        await viewModel.getMonth(monthId: formatCurrentDateToString())
                     }
                 }).environmentObject(viewModel)
             }

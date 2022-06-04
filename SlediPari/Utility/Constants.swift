@@ -7,7 +7,7 @@
 
 import Foundation
 
-let USE_LOCALHOST = true
+let USE_LOCALHOST = false
 let BASE_URL = "https://desolate-chamber-91023.herokuapp.com/"
 let BASE_URL_LOCALHOST = "http://192.168.0.105:1926/"
 
