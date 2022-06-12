@@ -51,9 +51,6 @@ struct PiePiece: View {
 
 struct PieChartView_Previews: PreviewProvider {
     static var previews: some View {
-        PieChartView(
-            spendings: Month(id: "03-2022", clothes: 0, workout: 0, food: 0, home: 0, restaurant: 0, smetki: 0, tok: 0, voda: 0, toplo: 0, internet: 0, telefon: 0, vhod: 0, cosmetics: 0, higien: 0, other: 0, transport: 0, taxi: 0, car: 0, public: 0, preparati: 0, clean: 0, wash: 0, toys: 0, tattoo: 0, snacks: 0, subscriptions: 0, remont: 0, machove: 30, furniture: 0, tehnika: 0, travel: 10, posuda: 0, medicine: 20, domPotrebi: 0, education: 0, entertainment: 0, gifts: 0).sortedList,
-            totalSum: 60
-        )
+        Text("")
     }
 }
