@@ -40,7 +40,7 @@ class MonthsViewModel: ObservableObject {
                             }
                             else {
                                 self.currentList = month.foodList
-                                self.totalSum = month.food
+                                self.totalSum = month.food.doubleValue
                             }
                             
                         case LocalizedStringKey("smetki"):
@@ -51,7 +51,7 @@ class MonthsViewModel: ObservableObject {
                             }
                             else {
                                 self.currentList = month.smetkiList
-                                self.totalSum = month.smetki
+                                self.totalSum = month.smetki.doubleValue
                             }
                             
                         case LocalizedStringKey("cosmetics"):
@@ -62,7 +62,7 @@ class MonthsViewModel: ObservableObject {
                             }
                             else {
                                 self.currentList = month.cosmeticsList
-                                self.totalSum = month.cosmetics
+                                self.totalSum = month.cosmetics.doubleValue
                             }
                             
                         case LocalizedStringKey("transport"):
@@ -73,7 +73,7 @@ class MonthsViewModel: ObservableObject {
                             }
                             else {
                                 self.currentList = month.transportList
-                                self.totalSum = month.transport
+                                self.totalSum = month.transport.doubleValue
                             }
                             
                         case LocalizedStringKey("preparati"):
@@ -84,7 +84,7 @@ class MonthsViewModel: ObservableObject {
                             }
                             else {
                                 self.currentList = month.preparatiList
-                                self.totalSum = month.preparati
+                                self.totalSum = month.preparati.doubleValue
                             }
                             
                         default: do {}

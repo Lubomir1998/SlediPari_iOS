@@ -1,9 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
-        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Month" representedClassName="Month" syncable="YES">
+        <attribute name="car" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="clean" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="clothes" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="cosmetics" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="domPotrebi" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="education" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="entertainment" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="food" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="gifts" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="higien" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="home" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="internet" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="machove" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="medicine" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="other" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="posuda" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="preparati" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="public" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="remont" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="restaurant" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="smetki" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="snacks" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="subscriptions" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="tattoo" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="taxi" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="tehnika" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="telefon" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="tok" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="toplo" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="toys" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="transport" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="travel" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="vhod" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="voda" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="wash" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="workout" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="Month" positionX="-63" positionY="-18" width="128" height="584"/>
     </elements>
 </model>

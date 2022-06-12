@@ -100,27 +100,27 @@ struct MonthView: View {
                                 switch category {
                                     case "food":
                                         viewModel.currentList = currentMonth.foodList
-                                        viewModel.totalSum = currentMonth.food
+                                        viewModel.totalSum = currentMonth.food.doubleValue
                                         viewModel.currentCategory = LocalizedStringKey("food")
                                         
                                     case "smetki":
                                         viewModel.currentList = currentMonth.smetkiList
-                                        viewModel.totalSum = currentMonth.smetki
+                                        viewModel.totalSum = currentMonth.smetki.doubleValue
                                         viewModel.currentCategory = LocalizedStringKey("smetki")
                                         
                                     case "preparati":
                                         viewModel.currentList = currentMonth.preparatiList
-                                        viewModel.totalSum = currentMonth.preparati
+                                        viewModel.totalSum = currentMonth.preparati.doubleValue
                                         viewModel.currentCategory = LocalizedStringKey("preparati")
                                         
                                     case "transport":
                                         viewModel.currentList = currentMonth.transportList
-                                        viewModel.totalSum = currentMonth.transport
+                                        viewModel.totalSum = currentMonth.transport.doubleValue
                                         viewModel.currentCategory = LocalizedStringKey("transport")
                                         
                                     case "cosmetics":
                                         viewModel.currentList = currentMonth.cosmeticsList
-                                        viewModel.totalSum = currentMonth.cosmetics
+                                        viewModel.totalSum = currentMonth.cosmetics.doubleValue
                                         viewModel.currentCategory = LocalizedStringKey("cosmetics")
                                         
                                     default: do {}
@@ -176,11 +176,7 @@ struct MonthView: View {
 struct MonthView_Previews: PreviewProvider {
     static var previews: some View {
         MonthView(
-            allMonths: [
-                Month(id: "03-2022", clothes: 0, workout: 0, food: 0, home: 0, restaurant: 0, smetki: 0, tok: 0, voda: 0, toplo: 0, internet: 0, telefon: 0, vhod: 0, cosmetics: 0, higien: 0, other: 0, transport: 0, taxi: 0, car: 0, public: 0, preparati: 0, clean: 0, wash: 0, toys: 0, tattoo: 0, snacks: 0, subscriptions: 0, remont: 0, machove: 0, furniture: 0, tehnika: 0, travel: 0, posuda: 0, medicine: 0, domPotrebi: 0, education: 0, entertainment: 0, gifts: 0),
-                Month(id: "04-2022", clothes: 0, workout: 0, food: 0, home: 0, restaurant: 0, smetki: 0, tok: 0, voda: 0, toplo: 0, internet: 0, telefon: 0, vhod: 0, cosmetics: 0, higien: 0, other: 0, transport: 0, taxi: 0, car: 0, public: 0, preparati: 0, clean: 0, wash: 0, toys: 0, tattoo: 0, snacks: 0, subscriptions: 0, remont: 0, machove: 0, furniture: 0, tehnika: 0, travel: 0, posuda: 0, medicine: 0, domPotrebi: 0, education: 0, entertainment: 0, gifts: 0),
-                Month(id: "05-2022", clothes: 0, workout: 0, food: 0, home: 0, restaurant: 0, smetki: 0, tok: 0, voda: 0, toplo: 0, internet: 0, telefon: 0, vhod: 0, cosmetics: 0, higien: 0, other: 0, transport: 0, taxi: 0, car: 0, public: 0, preparati: 0, clean: 0, wash: 0, toys: 0, tattoo: 0, snacks: 0, subscriptions: 0, remont: 0, machove: 0, furniture: 0, tehnika: 0, travel: 0, posuda: 0, medicine: 0, domPotrebi: 0, education: 0, entertainment: 0, gifts: 0)
-            ]
+            allMonths: []
         )
     }
 }

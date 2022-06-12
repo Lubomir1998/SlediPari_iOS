@@ -14,7 +14,7 @@ class MonthService {
     func getMonth(monthId: String) async throws -> Month? {
         
         do {
-            return try await api.getMonth(monthId: monthId)?.toMonth()
+            let dto = try await api.getMonth(monthId: monthId)
         }
         catch {
             throw error
@@ -24,7 +24,7 @@ class MonthService {
     func getAllMonths() async throws -> [Month] {
         
         do {
-            return try await api.getAllMonths().map { $0.toMonth() }
+            let dtos = try await api.getAllMonths()
         }
         catch {
             throw error
