@@ -31,6 +31,7 @@ func getSpendingOptions() -> [(String, LocalizedStringKey)]{
         ("snacks", LocalizedStringKey("snacks")),
         ("medicine", LocalizedStringKey("medicine")),
         ("domPotrebi", LocalizedStringKey("domPotrebi")),
+        ("tehnika", LocalizedStringKey("tehnika")),
         ("machove", LocalizedStringKey("machove")),
         ("furniture", LocalizedStringKey("furniture")),
         ("education", LocalizedStringKey("education")),
@@ -41,5 +42,6 @@ func getSpendingOptions() -> [(String, LocalizedStringKey)]{
         ("other", LocalizedStringKey("cosmetics_other")),
         ("clean", LocalizedStringKey("preparati_clean")),
         ("wash", LocalizedStringKey("preparati_wash")),
+        ("subscriptions", LocalizedStringKey("subscriptions"))
     ]
 }
