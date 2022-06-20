@@ -20,7 +20,7 @@ struct PieChartView: View {
                 
                 ZStack {
                     
-                    ForEach(0 ... spendings.count - 1, id: \.self) { index in
+                    ForEach(0..<spendings.count, id: \.self) { index in
                         
                         PiePiece(spendings: spendings, index: index, totalSum: totalSum, center: CGPoint(x: g.frame(in: .global).width / 2, y: g.frame(in: .global).width / 2))
                     }

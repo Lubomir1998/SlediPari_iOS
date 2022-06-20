@@ -21,7 +21,7 @@ struct SplashScreen: View {
                 
                 if viewModel.completed {
                     
-                    MonthView(allMonths: viewModel.allMonths.reversed())
+                    MonthView()
                 }
                 else {
                     
