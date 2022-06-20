@@ -22,7 +22,7 @@ class GetMonthsViewModel: ObservableObject {
         isLoading = true
         
         do {
-            allMonths = try await monthsService.getAllMonths()
+            try await monthsService.getAllMonths()
         }
         catch {
             errorMessage = error.localizedDescription

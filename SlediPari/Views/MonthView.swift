@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct MonthView: View {
-    
-    let allMonths: [Month]
-    
+        
     @ObservedObject private var viewModel = MonthsViewModel()
     @State var isBottomSheetOpened = false
     
@@ -28,7 +26,7 @@ struct MonthView: View {
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            ForEach(allMonths) { month in
+                            ForEach(viewModel.allMonths) { month in
                                 Text(month.id.toReadableDate)
                                     .padding(7)
                                     .background(viewModel.currentMonth?.id == month.id ? Color(UIColor.systemGray3) : Color(UIColor.systemBackground))
@@ -37,7 +35,7 @@ struct MonthView: View {
                                         
                                         Task.init {
                                             
-                                            await viewModel.getMonth(monthId: month.id)
+                                            viewModel.getMonth(monthId: month.id)
                                         }
                                     }
                                 
@@ -143,7 +141,8 @@ struct MonthView: View {
                 }
             }
             .task {
-                await viewModel.getMonth(monthId: formatCurrentDateToString())
+                viewModel.getAllMonths()
+                viewModel.getMonth(monthId: formatCurrentDateToString())
             }
             .frame(
                 minWidth: 0,
@@ -165,7 +164,8 @@ struct MonthView: View {
                     Task.init {
                         
                         viewModel.currentCategory = LocalizedStringKey("All")
-                        await viewModel.getMonth(monthId: formatCurrentDateToString())
+                        await viewModel.updateMonth()
+                        viewModel.getMonth(monthId: formatCurrentDateToString())
                     }
                 }).environmentObject(viewModel)
             }
@@ -175,8 +175,6 @@ struct MonthView: View {
 
 struct MonthView_Previews: PreviewProvider {
     static var previews: some View {
-        MonthView(
-            allMonths: []
-        )
+        MonthView()
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Month" representedClassName="Month" syncable="YES">
+    <entity name="Month" representedClassName=".Month" syncable="YES">
         <attribute name="car" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="clean" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="clothes" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
@@ -9,6 +9,7 @@
         <attribute name="education" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="entertainment" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="food" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="furniture" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="gifts" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="higien" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="home" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
@@ -40,6 +41,6 @@
         <attribute name="workout" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="Month" positionX="-63" positionY="-18" width="128" height="584"/>
+        <element name="Month" positionX="-63" positionY="-18" width="128" height="599"/>
     </elements>
 </model>
