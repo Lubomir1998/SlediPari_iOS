@@ -32,7 +32,7 @@ public class Month: NSManagedObject {
     @NSManaged public var car: NSNumber
     @NSManaged public var `public`: NSNumber
     @NSManaged public var preparati: NSNumber
-    @NSManaged public var clean: Double
+    @NSManaged public var clean: NSNumber
     @NSManaged public var wash: NSNumber
     @NSManaged public var toys: NSNumber
     @NSManaged public var tattoo: NSNumber
@@ -75,6 +75,8 @@ extension Month: Identifiable {
         self.car = NSNumber(value: object.transport.car)
         self.public = NSNumber(value: object.transport.public)
         self.preparati = NSNumber(value: object.preparati.clean + object.preparati.wash)
+        self.wash = NSNumber(value: object.preparati.wash)
+        self.clean = NSNumber(value: object.preparati.clean)
         self.toys = NSNumber(value: object.toys)
         self.tattoo = NSNumber(value: object.tattoo)
         self.snacks = NSNumber(value: object.snacks)
@@ -100,12 +102,11 @@ extension Month: Identifiable {
     var sortedList: [PieSlice] {
         
         var sorted: [PieSlice] = []
-        let mirror = Mirror(reflecting: self)
         
-        for child in mirror.children {
+        for (name, _) in self.entity.attributesByName {
             
-            if let category = child.label, let value = child.value as? Double, value > 0.0, (category != "home" && category != "restaurant" && category != "tok" && category != "voda" && category != "toplo" && category != "vhod" && category != "internet" && category != "telefon" && category != "car" && category != "taxi" && category != "public" && category != "clean" && category != "wash" && category != "other" && category != "higien") {
-                sorted.append(PieSlice(value: value, title: category, color: Color(category)))
+            if let value = self.value(forKey: name) as? Double, value > 0.0, (name != "home" && name != "restaurant" && name != "tok" && name != "voda" && name != "toplo" && name != "vhod" && name != "internet" && name != "telefon" && name != "car" && name != "taxi" && name != "public" && name != "clean" && name != "wash" && name != "other" && name != "higien") {
+                sorted.append(PieSlice(value: value, title: name, color: Color(name)))
             }
             else {
                 continue
@@ -119,11 +120,10 @@ extension Month: Identifiable {
     var totalSum: Double {
         
         var sum = 0.0
-        let mirror = Mirror(reflecting: self)
         
-        for child in mirror.children {
+        for (name, _) in  self.entity.attributesByName {
             
-            if let sumValue = child.value as? Double, (child.label != "id" && child.label != "smetki" && child.label != "transport" && child.label != "food" && child.label != "cosmetics" && child.label != "preparati") {
+            if let sumValue = self.value(forKey: name) as? Double, (name != "id" && name != "smetki" && name != "transport" && name != "food" && name != "cosmetics" && name != "preparati") {
                 sum += sumValue
             }
             else {
@@ -136,13 +136,12 @@ extension Month: Identifiable {
     
     var foodList: [PieSlice] {
         
-        let mirror = Mirror(reflecting: self)
         var list: [PieSlice] = []
         
-        for child in mirror.children {
+        for (name, _) in  self.entity.attributesByName {
             
-            if let category = child.label, let sumValue = child.value as? Double, category == "home" || category == "restaurant", sumValue > 0 {
-                list.append(PieSlice(value: sumValue, title: category, color: Color(category)))
+            if let sumValue = self.value(forKey: name) as? Double, name == "home" || name == "restaurant", sumValue > 0 {
+                list.append(PieSlice(value: sumValue, title: name, color: Color(name)))
             }
             else {
                 continue
@@ -155,13 +154,12 @@ extension Month: Identifiable {
     
     var smetkiList: [PieSlice] {
         
-        let mirror = Mirror(reflecting: self)
         var list: [PieSlice] = []
         
-        for child in mirror.children {
+        for (name, _) in  self.entity.attributesByName {
             
-            if let category = child.label, let sumValue = child.value as? Double, category == "tok" || category == "voda" || category == "internet" || category == "toplo" || category == "vhod" || category == "telefon", sumValue > 0 {
-                list.append(PieSlice(value: sumValue, title: category, color: Color(category)))
+            if let sumValue = self.value(forKey: name) as? Double, name == "tok" || name == "voda" || name == "internet" || name == "toplo" || name == "vhod" || name == "telefon", sumValue > 0 {
+                list.append(PieSlice(value: sumValue, title: name, color: Color(name)))
             }
             else {
                 continue
@@ -174,13 +172,12 @@ extension Month: Identifiable {
     
     var transportList: [PieSlice] {
         
-        let mirror = Mirror(reflecting: self)
         var list: [PieSlice] = []
         
-        for child in mirror.children {
+        for (name, _) in  self.entity.attributesByName {
             
-            if let category = child.label, let sumValue = child.value as? Double, category == "taxi" || category == "car" || category == "public", sumValue > 0 {
-                list.append(PieSlice(value: sumValue, title: category, color: Color(category)))
+            if let sumValue = self.value(forKey: name) as? Double, name == "taxi" || name == "car" || name == "public", sumValue > 0 {
+                list.append(PieSlice(value: sumValue, title: name, color: Color(name)))
             }
             else {
                 continue
@@ -193,13 +190,12 @@ extension Month: Identifiable {
     
     var preparatiList: [PieSlice] {
         
-        let mirror = Mirror(reflecting: self)
         var list: [PieSlice] = []
         
-        for child in mirror.children {
+        for (name, _) in  self.entity.attributesByName {
             
-            if let category = child.label, let sumValue = child.value as? Double, category == "clean" || category == "wash", sumValue > 0 {
-                list.append(PieSlice(value: sumValue, title: category, color: Color(category)))
+            if let sumValue = self.value(forKey: name) as? Double, name == "clean" || name == "wash", sumValue > 0 {
+                list.append(PieSlice(value: sumValue, title: name, color: Color(name)))
             }
             else {
                 continue
@@ -212,13 +208,12 @@ extension Month: Identifiable {
     
     var cosmeticsList: [PieSlice] {
         
-        let mirror = Mirror(reflecting: self)
         var list: [PieSlice] = []
         
-        for child in mirror.children {
+        for (name, _) in  self.entity.attributesByName {
             
-            if let category = child.label, let sumValue = child.value as? Double, category == "higien" || category == "other", sumValue > 0 {
-                list.append(PieSlice(value: sumValue, title: category, color: Color(category)))
+            if let sumValue = self.value(forKey: name) as? Double, name == "higien" || name == "other", sumValue > 0 {
+                list.append(PieSlice(value: sumValue, title: name, color: Color(name)))
             }
             else {
                 continue
