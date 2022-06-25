@@ -11,7 +11,7 @@ import SwiftUI
 func formatCurrentDateToString() -> String {
     
     let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "MM-yyyy"
+    dateFormatter.dateFormat = "yyyy-MM"
     return dateFormatter.string(from: Date())
 }
 
@@ -36,7 +36,7 @@ extension String {
     var toReadableDate: String {
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM-yyyy"
+        dateFormatter.dateFormat = "yyyy-MM"
         
         if let date = dateFormatter.date(from: self) {
             let dateFormatter2 = DateFormatter()
