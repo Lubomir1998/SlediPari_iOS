@@ -165,6 +165,7 @@ struct MonthView: View {
                         
                         viewModel.currentCategory = LocalizedStringKey("All")
                         await viewModel.updateMonth()
+                        viewModel.getAllMonths()
                         viewModel.getMonth(monthId: formatCurrentDateToString())
                     }
                 }).environmentObject(viewModel)

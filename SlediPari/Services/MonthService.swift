@@ -35,7 +35,7 @@ class MonthService {
         
         let request = NSFetchRequest<Month>()
         request.entity = Month.entity()
-        request.sortDescriptors = [NSSortDescriptor(key: "id", ascending: true)]
+        request.sortDescriptors = [NSSortDescriptor(key: "id", ascending: false)]
         
         do {
             return try context.fetch(request)

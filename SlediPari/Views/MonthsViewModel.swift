@@ -24,7 +24,7 @@ class MonthsViewModel: ObservableObject {
     
     func getAllMonths() {
         
-        allMonths = monthsService.getMonthsFromCache().reversed()
+        allMonths = monthsService.getMonthsFromCache()
     }
     
     func getMonth(monthId: String) {
